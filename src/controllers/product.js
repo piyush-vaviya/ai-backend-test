@@ -46,7 +46,7 @@ const updateProduct = async (params, data) => {
 
   validateValues(data);
 
-  const updatedProduct = await Product.findOneAndDelete(
+  const updatedProduct = await Product.findOneAndUpdate(
     { _id: id },
     { $set: data },
     { new: true }

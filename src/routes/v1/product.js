@@ -35,14 +35,14 @@ productRouter.post(
 productRouter.put(
   "/:id",
   mappedController(
-    productController.createProduct,
+    productController.updateProduct,
     MAPPERS.PARAMS,
     MAPPERS.DATA
   )
 );
 productRouter.delete(
   "/:id",
-  mappedController(productController.de, MAPPERS.PARAMS)
+  mappedController(productController.deleteProduct, MAPPERS.PARAMS)
 );
 productRouter.get(
   "/",
